@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-ar" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//o.kooora.com/jquery-3.3.1.min.js"></script>
+    <script  src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+</head>
+<body dir="rtl">
+<div class="artitle"></div>
+<div id="relatedArticles">
+
+</div>
+<script>
+    var isMobile = false;
+    var cds = /Mobi/.test(navigator.userAgent) && screen.width < 737 ? 'Mobile' : /Mobi/.test(navigator.userAgent) && screen.width > 767 ? 'Tablet' : 'Desktop';
+    if (cds == 'Mobile') {
+        isMobile = true;
+    }
+    var pdstyle = '.my_related_span{font-family: "Baloo 2", cursive !important; font-weight: 700; text-align: left; font-size: 20px !important; margin: 0px; display: inline-block; vertical-align: middle;} #paidmr {background:#fff; float:left; width: 100%; text-align: center; margin: 0 auto;}.mrblock {width: 32%; -webkit-box-flex: 0; max-width: 32%; flex: 0 0 32%; margin: .75% .5%; display: inline-block;} .title{margin: 15px 0 2px; border-top: 1px solid #e5e5e5; padding: 5px;} @media screen and (max-width: 414px){ .title{background: #333;} .mrblock {padding:5px; width: 100%; max-width: 97%; margin: 0;} }@media screen and (max-width: 400px){ .title{background: #333;} .mrblock {padding:5px; width:100%; max-width: 97%; margin: 0;} } @media screen and (max-width: 360px){ .title{background: #333;} .mrblock {padding:5px; width: 100%; max-width: 97%; margin: 0;} } @media screen and (max-width: 320px){ .title{background: #333;} .mrblock {padding:5px; width: 100%; max-width: 96%; margin: 0;}  }';
+    var headEl1 = document.getElementsByTagName('head')[0];
+    var styleEl1 = document.createElement('style');
+    var textnode1 = document.createTextNode(pdstyle);
+    var bd1 = document.body;
+    var docEl1 = document;
+    var linkEl = document.createElement('link');
+    linkEl.setAttribute('href', 'https://fonts.googleapis.com/css?family=Baloo+2:400,700&display=swap');
+    linkEl.setAttribute('rel', 'stylesheet');
+    styleEl1.setAttribute("type", "text/css");
+    if (styleEl1.styleSheet) { // for IE
+        styleEl1.styleSheet.cssText = pdstyle;
+    } else { // others
+        styleEl1.appendChild(textnode1);
+    }
+    headEl1.appendChild(styleEl1);
+    headEl1.appendChild(linkEl);
+
+        jQuery('#relatedArticles').before('<div id="paidmr" class=""><ul></ul></div>');
+        jQuery('#paidmr').before('<h2 class="title"><div style="float: right;" class="artitle">قد يعجبك أيضاً</div><div style="float: left;" class="my_related_span">Spread</div></h2>');
+        jQuery('#paidmr ul').append('<li class="mrblock"><article id="pdmr1"></article></li>');
+        jQuery('#paidmr ul').append('<li class="mrblock"><article id="pdmr2"></article></li>');
+        jQuery('#paidmr ul').append('<li class="mrblock"><article id="pdmr3"></article></li>');
+        jQuery('#paidmr ul').append('<li class="mrblock"><article id="pdmr4"></article></li>');
+        jQuery('#paidmr ul').append('<li class="mrblock"><article id="pdmr5"></article></li>');
+        jQuery('#paidmr ul').append('<li class="mrblock"><article id="pdmr6"></article></li>');
+        jQuery('#paidmr').css('direction', 'rtl');
+
+        spreadInit();
+
+
+    function spreadInit() {
+        var testAdUnit = '/7229/n7729.testsite/kooora';
+        var adUnitName = testAdUnit; //once implementation is done, change the value to liveAdUnit
+        var isShow = false, mr1, mr2, mr3, mr4, mr5, mr6;
+        googletag.cmd.push(function () {
+
+                document.querySelector('.artitle').style.paddingTop = '5px';
+                mr1 = googletag.defineSlot(adUnitName, ['fluid'], 'pdmr1').setTargeting("pos", ["mr1", "myrelated"]).setTargeting("adType", "grid").addService(googletag.pubads());
+
+                mr2 = googletag.defineSlot(adUnitName, ['fluid'], 'pdmr2').setTargeting("pos", ["mr2", "myrelated"]).setTargeting("adType", "grid").addService(googletag.pubads());
+
+                mr3 = googletag.defineSlot(adUnitName, ['fluid'], 'pdmr3').setTargeting("pos", ["mr3", "myrelated"]).setTargeting("adType", "grid").addService(googletag.pubads());
+
+                mr4 = googletag.defineSlot(adUnitName, ['fluid'], 'pdmr4').setTargeting("pos", ["mr4", "myrelated"]).setTargeting("adType", "grid").addService(googletag.pubads());
+
+                mr5 = googletag.defineSlot(adUnitName, ['fluid'], 'pdmr5').setTargeting("pos", ["mr5", "myrelated"]).setTargeting("adType", "grid").addService(googletag.pubads());
+
+                mr6 = googletag.defineSlot(adUnitName, ['fluid'], 'pdmr6').setTargeting("pos", ["mr6", "myrelated"]).setTargeting("adType", "grid").addService(googletag.pubads());
+
+            googletag.pubads().refresh([mr1, mr2, mr3, mr4, mr5, mr6]);
+        });
+    }
+</script>
+</body>
+</html>

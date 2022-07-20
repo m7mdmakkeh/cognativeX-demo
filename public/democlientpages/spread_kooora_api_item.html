@@ -1,0 +1,26 @@
+<script src="https://static.cognativex.com/cognativex_widget_1.3.js"></script>
+
+
+<div class="widget">
+    <h1 id="cx_title_1"></h1>
+    <a id="cx_url_1">
+        <img id="cx_thumbnail_1"/>
+        <h3 id="cx_brand_1"></h3>
+    </a>
+</div>
+
+<script>
+    var widgetid = '5743401353871360';
+    var domain = 'kooora.com';
+    var widget_index = 1;// should be incremented for every creative starting from 1
+
+    function fillItem(index) {
+        var widget = COGNATIVEX_WIDGET.getWidget(domain, widgetid, index);
+        document.getElementById('cx_title_' + index).innerHTML = widget.title;
+        document.getElementById('cx_url_' + index).href = widget.click_url;
+        document.getElementById('cx_thumbnail_' + index).src = widget.image;
+        document.getElementById('cx_brand_' + index).innerHTML = widget.brand;
+    }
+
+    fillItem(widget_index);
+</script>

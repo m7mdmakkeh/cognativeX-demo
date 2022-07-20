@@ -1,0 +1,58 @@
+body{
+    padding:0;
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.desc{
+    font: 1.4rem sans-serif;
+}
+
+#clientsGrid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card{
+    width:200px;
+    background-color: #efefef;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    text-decoration: none;
+}
+
+.card:visited{
+    color: black
+}
+
+.client-logo{
+    padding: 1.3rem;
+    position: relative;
+}
+.client-logo::after{
+    content: "";
+    width:80%;
+    height:1px;
+    position: absolute;
+    top: 100%;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: #aaa;
+}
+
+.client-logo img{
+    width: 100%;
+    height: 100px
+}
+
+.client-brand-name{
+    font: 1.4rem sans-serif;
+    text-align: center;
+    padding: 1rem 0 ;
+}

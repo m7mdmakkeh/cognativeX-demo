@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+      <!--This page Send the following events:
+      Pageview
+      Heartbeat (every 10s)
+      Widget view (when widget is loaded in the page)
+      Widget impression (when widget is visible on the screen)-->
+  
+</head>
+
+<body>
+
+    <img width="100" src="https://static.cognativex.com/favicon.png" alt="CS_LOGO">
+
+    <h1 class="desc">This page demonstrates how our widget system works on a demo version on our client's websites</h1>
+
+    <div id="clientsGrid"></div>
+
+    <script type="module">
+
+        import clients from "./clients.js";
+
+        function populateGrid(grid, clients){
+          clients.forEach(client=>{
+            const card = document.createElement("a");
+            card.classList.add("card")
+            card.href = window.location + "democlientpages/" + client.htmlpagename;
+
+            const logo = document.createElement("div");
+            logo.classList.add("client-logo");
+            const img = new Image();
+            img.src= client.logo;
+            logo.append(img);
+
+            const name = document.createElement("div");
+            name.classList.add("client-brand-name");
+            name.innerText = client.name;
+
+            card.append(logo, name);
+            grid.append(card);
+          });
+        };
+
+        populateGrid(document.getElementById("clientsGrid"), clients)
+
+
+    </script>
+</body>
+</html>
