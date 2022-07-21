@@ -8,12 +8,12 @@
 }
 
 body{
-    padding:0;
+    padding:4rem;
     display:flex;
     flex-direction: column;
     gap:3rem;
     min-height: 100vh;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
     background-color: var(--back-dark);
@@ -32,20 +32,36 @@ body{
 
 .card{
     width:200px;
+    height: fit-content;
+    max-height: 220px;
+    overflow: hidden;
     background-color: var(--back-light);
-    text-decoration: none;
     border-radius: 10px;
     color: var(--white);
     box-shadow: 0 10px 30px -10px rgba(.0, .0, 0, .3);
-    transition: transform .3s;
-    padding: 1rem;
+    transition: max-height .8s;
+    padding: 1rem 1.3rem 2.3rem 1.3rem;
+    position: relative;
+}
+.card:hover{
+    box-shadow: 0 2px 0 0 var(--accent);
+    max-height: 1000px;
+}
+.card::after{
+    content:"^";
+    position: absolute;
+    font: 1.5rem "Cairo", sans-serif;
+    bottom:-5px;
+    left:50%;
+    transform: translateX(-50%) rotate(180deg);
+    color: var(--white);
+    opacity: .5;
+    transition: .8s;
+}
+.card:hover::after{
+    transform: translateX(-50%) rotate(0);
 }
 
-.card:hover{
-    color: var(--accent);
-    transform: translateY(-6px);
-    box-shadow: 0 2px 0 0 var(--accent);
-}
 
 .client-logo{
     padding: 1.3rem;
@@ -72,4 +88,35 @@ body{
     font: 1.4rem "Cairo", sans-serif;
     text-align: center;
     padding: 1rem 0 ;
+    margin-bottom: 3rem;
+}
+
+
+.widgetsList{
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.widgetsList li{
+    font: 1.5rem "Cairo", sans-serif;
+    color:var(--white);
+}
+.widgetsList li a{
+    text-decoration: none;
+}
+.widgetsList li a:hover{
+    color: var(--accent) !important;
+}
+.widgetsList li a:visited{
+    color:var(--white);
+}
+.widgetsList li a span{
+    font-size: 1rem;
+    opacity: .5;
 }

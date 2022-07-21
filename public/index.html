@@ -8,15 +8,6 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-      <!--This page Send the following events:
-      Pageview
-      Heartbeat (every 10s)
-      Widget view (when widget is loaded in the page)
-      Widget impression (when widget is visible on the screen)-->
-  
-</head>
-
-<body>
 
     <img width="100" src="https://static.cognativex.com/favicon.png" alt="CS_LOGO">
 
@@ -30,9 +21,8 @@
 
         function populateGrid(grid, clients){
           clients.forEach(client=>{
-            const card = document.createElement("a");
+            const card = document.createElement("div");
             card.classList.add("card")
-            card.href = window.location + "democlientpages/" + client.htmlpagename;
 
             const logo = document.createElement("div");
             logo.classList.add("client-logo");
@@ -44,7 +34,17 @@
             name.classList.add("client-brand-name");
             name.innerText = client.name;
 
-            card.append(logo, name);
+            const widgetsList = document.createElement("ul");
+            widgetsList.classList.add("widgetsList");
+            client.widgets.forEach((widget, index) => {
+              widgetsList.innerHTML += `<li>
+                                            <a href="${window.location + "democlientpages/" + widget.htmlpagename}">
+                                                <span>Widget ${index+1} ID</span> ${widget.id}
+                                            </a>
+                                        </li>`;
+            });
+
+            card.append(logo, name, widgetsList);
             grid.append(card);
           });
         };
