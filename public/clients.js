@@ -28,37 +28,6 @@ const clients = [
             },
         ]
     },
-    // {
-    //     htmlpagename: "alittihad.html",
-    //     name: "الأتحاد",
-    //     logo: "https://static.alittihad.ae/front/Content/Alittihad/img/logo-desktop.svg",
-    //     widgets: [
-    //         {
-    //             id: 0,
-    //             htmlpagename: "yawmiyati-home.html",
-    //         },
-    //         {
-    //             id: 1,
-    //             htmlpagename: "yawmiyati-subpage.html",
-    //         },
-    //     ]
-    // },
-    // {
-    //     htmlpagename: "aljarida.html",
-    //     name: "الجريدة",
-    //     logo: "https://www.aljarida.com/i/app_icon_ar.png",
-    //     widgets: [
-    //         {
-    //             id: 0,
-    //             htmlpagename: "yawmiyati-home.html",
-    //         },
-    //         {
-    //             id: 1,
-    //             htmlpagename: "yawmiyati-subpage.html",
-    //         },
-    //     ]
-    // },
-
 
 ]
 
