@@ -1,6 +1,6 @@
 const clients = [
     {
-        htmlpagename: "al3arabi.html",
+        htmlpagename: "striveme-page.html",
         name: "العربي",
         logo: "https://al3arabi.com/bundles/al3arabiwebsite/images/logo.png"
     },
