@@ -1,8 +1,8 @@
 const clients = [
     {
         htmlpagename: "striveme-page.html",
-        name: "العربي",
-        logo: "https://al3arabi.com/bundles/al3arabiwebsite/images/logo.png"
+        name: "StriveMe",
+        logo: "https://striveme.com/img/front/logo.png"
     },
     {
         htmlpagename: "alanba.html",
