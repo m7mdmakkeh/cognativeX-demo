@@ -31,7 +31,7 @@ body{
 }
 
 .card{
-    width:200px;
+    width:250px;
     height: fit-content;
     max-height: 220px;
     overflow: hidden;
@@ -40,12 +40,13 @@ body{
     color: var(--white);
     box-shadow: 0 10px 30px -10px rgba(.0, .0, 0, .3);
     transition: max-height .8s;
-    padding: 1rem 1.3rem 2.3rem 1.3rem;
+    padding: 1rem 2rem 2.3rem 2rem;
     position: relative;
 }
 .card:hover{
-    box-shadow: 0 2px 0 0 var(--accent);
-    max-height: 1000px;
+    box-shadow: -2px 0 0 0 var(--accent);
+    max-height: 550px;
+    overflow-y: auto;
 }
 .card::after{
     content:"^";
@@ -60,6 +61,16 @@ body{
 }
 .card:hover::after{
     transform: translateX(-50%) rotate(0);
+}
+.card::-webkit-scrollbar-track{
+    display: none;
+}
+.card::-webkit-scrollbar-thumb{
+    background-color: var(--white);
+    border-radius: 10px;
+}
+.card::-webkit-scrollbar{
+    width:5px;
 }
 
 
