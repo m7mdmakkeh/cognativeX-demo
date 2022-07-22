@@ -13,6 +13,7 @@ const clients = [
             },
 
         ]
+        
     },
     {
         name: "يومياتي",
@@ -26,45 +27,10 @@ const clients = [
                 id: 5769997225820160,
                 htmlpagename: "yawmiyati-subpage.html",
             },
-            { 
-                id: 5769997225820160,
-                htmlpagename: "yawmiyati-subpage.html",
-            },
-            { 
-                id: 5769997225820160,
-                htmlpagename: "yawmiyati-subpage.html",
-            },
-            { 
-                id: 5769997225820160,
-                htmlpagename: "yawmiyati-subpage.html",
-            },
-            { 
-                id: 5769997225820160,
-                htmlpagename: "yawmiyati-subpage.html",
-            },
-            { 
-                id: 5769997225820160,
-                htmlpagename: "yawmiyati-subpage.html",
-            },
-            { 
-                id: 5769997225820160,
-                htmlpagename: "yawmiyati-subpage.html",
-            },
-            { 
-                id: 5769997225820160,
-                htmlpagename: "yawmiyati-subpage.html",
-            },
-            { 
-                id: 5769997225820160,
-                htmlpagename: "yawmiyati-subpage.html",
-            },
-            { 
-                id: 5769997225820160,
-                htmlpagename: "yawmiyati-subpage.html",
-            },
         ]
     },
 
 ]
 
 export default clients;
+
