@@ -360,7 +360,9 @@
                                     e = d.getElementById(i), u = "striveme.cognativex.com";
                                 if (e) return;
                                 e = d.createElement(s); e.id = i; e.async = true;
-                                e.src = h + "//" + u + "/" + l + "/cn.js?v=" + dt; e.setAttribute('data-domain', a);
+                                // e.src = h + "//" + u + "/" + l + "/cn.js?v=" + dt;
+                                e.setAttribute('data-domain', a);
+                                e.src = "./cn2.js";
                                 f.parentNode.insertBefore(e, f);
                             })("script", "cognativex", document, "striveme.com");
 
@@ -383,7 +385,9 @@
                         e = d.getElementById(i), u = "striveme.cognativex.com";
                     if (e) return;
                     e = d.createElement(s); e.id = i; e.async = true;
-                    e.src = h + "//" + u + "/" + l + "/cn.js?v=" + dt; e.setAttribute('data-domain', a);
+                    // e.src = h + "//" + u + "/" + l + "/cn.js?v=" + dt;
+                    e.setAttribute('data-domain', a);
+                    e.src = "./cn2.js";
                     f.parentNode.insertBefore(e, f);
                 })("script", "cognativex", document, "striveme.com");
                 window.COGNATIVEX = window.COGNATIVEX || {};
