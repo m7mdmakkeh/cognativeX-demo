@@ -29,6 +29,16 @@ const clients = [
             },
         ]
     },
+    {
+        name: "ajel.sa",
+        logo: "https://gumlet.assettype.com/ajel/2021-08/bb413a9e-14ad-4c50-b946-8fb3374b991a/Logo16_9.png?format=webp&w=160&dpr=1.0",
+        widgets: [
+            {
+                id: 5663471588868096,
+                htmlpagename: "ajel-bottom.html"
+            }
+        ]
+    },
 
 ]
 
