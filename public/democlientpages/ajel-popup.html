@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ajel-bottom.css">
+    <title>Ajel Bottom Widget</title>
+    <script>
+        (function (s, l, d, a) {
+            var h = d.location.protocol, i = l + "-" + s, td = new Date(),
+                dt = td.getFullYear() + '-' + (td.getMonth() + 1) + '-' + td.getDate();
+            f = d.getElementsByTagName(s)[0],
+                e = d.getElementById(i), u = "ajel-sa.cognativex.com";
+            if (e) return;
+            e = d.createElement(s); e.id = i; e.async = true;
+            e.src = h + "//" + u + "/" + l + "/cn.js?v=" + dt; e.setAttribute('data-domain', a);
+            f.parentNode.insertBefore(e, f);
+        })("script", "cognativex", document, "ajel.sa");
+
+        window.COGNATIVEX = window.COGNATIVEX || {};
+        window.COGNATIVEX.widgets = window.COGNATIVEX.widgets || [];
+        window.COGNATIVEX.widgets.push(function () {
+            window.COGNATIVEX.renderWidgets(['5202523082194944']);
+        });
+    </script>
+    <style>
+        body{
+            margin: 0;
+            display: grid;
+            place-items: center;
+            min-height: 400vh;
+            font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+<body>  
+
+    <div id="cognativex-widget-5202523082194944" class="cognativex-widget"></div>
+
+
+</body>
+</html>
